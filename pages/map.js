@@ -7,7 +7,7 @@ function MyComponent() {
     const key =  process.env.NEXT_PUBLIC_GOOGLE_API
 
     const containerStyle = {
-      width: '800px',
+      width: '700px',
       height: '400px'
     };
     const router = useRouter();

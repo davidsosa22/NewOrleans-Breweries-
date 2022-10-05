@@ -11,20 +11,20 @@ export default function PostPage() {
     <div style={{marginBottom: 10 + 'px'}}>
     Name: {router.query.name}
     </div>
-    <div style={{marginBottom: 10 + 'px'}}>
-    Address: {router.query.street} {router.query.city}, {router.query.state} {router.query.zip}
-    </div>
-    <div style={{marginBottom: 10 + 'px'}}>
-    Zip: {router.query.zip}
-    </div>
-    <a href={router.query.url}>
-    Url:  {router.query.url}
-    </a>
-    <div>
-    <Link href="/">
-        <button className={button.button}>Back</button>
-      </Link>
-    </div>
+    <p>Address:</p>
+        <hr />
+        <span>{router.query.street} {router.query.city}, </span>
+        <span>{router.query.state} {router.query.zip}</span>
+    <td onClick={()=> window.open(router.query.url, "_blank")} className={button.button}>
+      Visit Page
+      </td>
+
+    {/* <Link href="/">
+        <button className={button.button}>
+          Back
+          </button>
+      </Link> */}
+
     <div className={map.grid}>
     <Map lng={router.query.lng} lat={router.query.lat}/>
     </div>
