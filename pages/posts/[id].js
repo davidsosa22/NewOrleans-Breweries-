@@ -19,12 +19,6 @@ export default function PostPage() {
       Visit Page
       </td>
 
-    {/* <Link href="/">
-        <button className={button.button}>
-          Back
-          </button>
-      </Link> */}
-
     <div className={map.grid}>
     <Map lng={router.query.lng} lat={router.query.lat}/>
     </div>

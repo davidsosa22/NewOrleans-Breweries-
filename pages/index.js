@@ -69,7 +69,9 @@ export default function Home() {
                 }
               }}
             >
-              <a>{brewery.name}</a>
+              <a>
+                {brewery.name}
+                </a>
             </Link>
           </div>
         ))}
