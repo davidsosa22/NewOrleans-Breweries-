@@ -3,23 +3,18 @@ import Link from 'next/link'
 import Map from '../map'
 import styles from './../../styles/Home.module.scss'
 import button from './../../styles/Button.module.scss'
+import map from './../../styles/Map.module.scss'
 
 export default function PostPage() {
   const router = useRouter();
-  return <div className={styles.main}>
-    <div>
+  return <div className={styles.main} >
+    <div style={{marginBottom: 10 + 'px'}}>
     Name: {router.query.name}
     </div>
-    <div>
-    Street: {router.query.street}
+    <div style={{marginBottom: 10 + 'px'}}>
+    Address: {router.query.street} {router.query.city}, {router.query.state} {router.query.zip}
     </div>
-    <div>
-    City: {router.query.city}
-    </div>
-    <div>
-    State: {router.query.state}
-    </div>
-    <div>
+    <div style={{marginBottom: 10 + 'px'}}>
     Zip: {router.query.zip}
     </div>
     <a href={router.query.url}>
@@ -30,6 +25,8 @@ export default function PostPage() {
         <button className={button.button}>Back</button>
       </Link>
     </div>
+    <div className={map.grid}>
     <Map lng={router.query.lng} lat={router.query.lat}/>
+    </div>
     </div>;
 }
