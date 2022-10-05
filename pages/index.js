@@ -18,7 +18,6 @@ export default function Home() {
     fetch("https://api.openbrewerydb.org/breweries?by_city=new_orleans&per_page=10")
     .then(res => {
       // console.log(res, 'data')
-      print(res)
       return res.json()
     })
     .then(
