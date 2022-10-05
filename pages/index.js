@@ -13,9 +13,12 @@ export default function Home() {
 // fetch the data from the api
 // /data is a restful api created in the backend using python
   useEffect(() => {
-    fetch("/data")
+    // this is fetching the api created in the backend
+    // fetch("/data")
+    fetch("https://api.openbrewerydb.org/breweries?by_city=new_orleans&per_page=10")
     .then(res => {
       // console.log(res, 'data')
+      print(res)
       return res.json()
     })
     .then(
@@ -60,7 +63,8 @@ export default function Home() {
                   city: brewery.city,
                   state: brewery.state,
                   zip: brewery.postal_code,
-                  url: brewery.url,
+                  // url: brewery.url,
+                  url: brewery.website_url,
                   lat: brewery.latitude,
                   lng: brewery.longitude
                 }
