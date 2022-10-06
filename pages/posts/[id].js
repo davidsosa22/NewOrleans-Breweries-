@@ -20,7 +20,7 @@ export default function PostPage() {
       </td>
 
     <div className={map.grid}>
-    <Map lng={router.query.lng} lat={router.query.lat}/>
+      {router.query.lng ? <Map lng={router.query.lng} lat={router.query.lat}/> : ''}
     </div>
     </div>;
 }

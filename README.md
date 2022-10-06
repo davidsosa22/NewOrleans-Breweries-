@@ -5,8 +5,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+To start the front end
+
+cd to NewOrleans-Breweries
 npm run dev
-# or
+
+To start the backend
+
+cd to NewOrleans-Breweries then cd to backend
+pip install -r requirements.txt
+then
+python app.py
+
 yarn dev
 ```
 
