@@ -15,9 +15,7 @@ export default function PostPage() {
         <hr />
         <span>{router.query.street} {router.query.city}, </span>
         <span>{router.query.state} {router.query.zip}</span>
-    <td onClick={()=> window.open(router.query.url, "_blank")} className={button.button}>
-      Visit Page
-      </td>
+    {router.query.url ? <td onClick={()=> window.open(router.query.url, "_blank")} className={button.button}>Visit Page</td> : ''}
 
     <div className={map.grid}>
       {router.query.lng ? <Map lng={router.query.lng} lat={router.query.lat}/> : ''}
